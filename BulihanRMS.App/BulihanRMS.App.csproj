@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{610E9A87-9680-462B-9D41-9CCA2F1C098C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BulihanRMS.App</RootNamespace>
+    <AssemblyName>BulihanRMS.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\libraries\bunifu\bunifu\Bunifu_UI_WinForms_1.11.5.1_Downloadly.ir\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\TimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TimePicker.Designer.cs">
+      <DependentUpon>TimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBlotter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBlotter.Designer.cs">
+      <DependentUpon>frmBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBizRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBizRecords.Designer.cs">
+      <DependentUpon>frmBizRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIndigency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIndigency.Designer.cs">
+      <DependentUpon>frmIndigency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmResidency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmResidency.Designer.cs">
+      <DependentUpon>frmResidency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBrgyBizClearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBrgyBizClearance.Designer.cs">
+      <DependentUpon>frmBrgyBizClearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBarangayClearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBarangayClearance.Designer.cs">
+      <DependentUpon>frmBarangayClearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProperties.Designer.cs">
+      <DependentUpon>frmProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDailyDuty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDailyDuty.Designer.cs">
+      <DependentUpon>frmDailyDuty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOfficials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOfficials.Designer.cs">
+      <DependentUpon>frmOfficials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPersonalInfo.Designer.cs">
+      <DependentUpon>frmPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimePicker.Designer.cs">
+      <DependentUpon>frmTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CustomAttributes\UserRoleValidator.cs" />
+    <Compile Include="Helpers\Themes\SideBar.cs" />
+    <Compile Include="Helpers\LocalUtils.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\dsReport.cs">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\dsReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmUserAccount.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
+    <None Include="pdf\help.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\workers-256.png" />
+    <None Include="Resources\arrow-87-256.png" />
+    <None Include="Resources\plus-4-2561.png" />
+    <None Include="Resources\ic.png" />
+    <None Include="Resources\ic1.png" />
+    <None Include="Resources\folder-3-64.png" />
+    <None Include="Resources\upload-256.png" />
+    <None Include="Resources\upload-3-256.png" />
+    <None Include="Resources\upload-3-2561.png" />
+    <None Include="Resources\arrow-91-256.png" />
+    <None Include="Resources\text-file-4-256.png" />
+    <None Include="Resources\text-file-2-256.png" />
+    <None Include="Resources\text-file-2-256 %281%29.png" />
+    <None Include="Resources\text-file-3-256.png" />
+    <None Include="Resources\printer-3-256.png" />
+    <None Include="Resources\time-8-256.png" />
+    <None Include="Resources\arrow-203-256.png" />
+    <None Include="Resources\arrow-141-256.png" />
+    <None Include="Resources\question-mark-256_white.png" />
+    <Content Include="todo.txt" />
+    <EmbeddedResource Include="Controls\TimePicker.resx">
+      <DependentUpon>TimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBlotter.resx">
+      <DependentUpon>frmBlotter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBizRecords.resx">
+      <DependentUpon>frmBizRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmIndigency.resx">
+      <DependentUpon>frmIndigency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmResidency.resx">
+      <DependentUpon>frmResidency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBrgyBizClearance.resx">
+      <DependentUpon>frmBrgyBizClearance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBarangayClearance.resx">
+      <DependentUpon>frmBarangayClearance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProperties.resx">
+      <DependentUpon>frmProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDailyDuty.resx">
+      <DependentUpon>frmDailyDuty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOfficials.resx">
+      <DependentUpon>frmOfficials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPersonalInfo.resx">
+      <DependentUpon>frmPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimePicker.resx">
+      <DependentUpon>frmTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Kagawad.rdlc" />
+    <EmbeddedResource Include="Reports\Properties.rdlc" />
+    <EmbeddedResource Include="Reports\rptInformationSheet.rdlc" />
+    <EmbeddedResource Include="Reports\rptBlotter.rdlc" />
+    <EmbeddedResource Include="Reports\rptIndigency.rdlc" />
+    <EmbeddedResource Include="Reports\rptResidency.rdlc" />
+    <EmbeddedResource Include="Reports\rptBrgyBizClearance.rdlc" />
+    <EmbeddedResource Include="Reports\rptBarangayClearance.rdlc" />
+    <EmbeddedResource Include="Settings\frmUserAccount.resx">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\conference-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icons8-male-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\x-mark-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\login-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\login-32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\menu-4-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dashboard-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\info-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\maximize-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\minimize-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\close-window-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\restore-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\gear-2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\arrow-37-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\dsReport.xsc">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dsReport.xss">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\list-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mother-and-child-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduation-cap-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor-suitecase-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-property-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-property-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-property-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-user-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BulihanRMS.Logic\BulihanRMS.Logic.csproj">
+      <Project>{ffb6671b-bd7d-4f68-900e-3db72aa4502e}</Project>
+      <Name>BulihanRMS.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{12e8c23e-00ca-49df-8e04-d86c83f3c088}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-4-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-2-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-13-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-property-2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-5-256_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-3-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-call-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-3-256-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-256_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today-2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\police-3-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker-2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker-256-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-3-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-3-256 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-2-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-2-256 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

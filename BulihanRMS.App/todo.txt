@@ -1,0 +1,8 @@
+﻿Todo Notes
+
+
+
+
+add not implemented exceptions to forms
+            *blotter
+            *

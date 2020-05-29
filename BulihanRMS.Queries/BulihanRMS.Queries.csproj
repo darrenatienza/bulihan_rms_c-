@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38C60A06-31D4-4C9F-B5DF-E5A245F07FD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BulihanRMS.Queries</RootNamespace>
+    <AssemblyName>BulihanRMS.Queries</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Domain\BarangayClearance.cs" />
+    <Compile Include="Core\Domain\BizWorker.cs" />
+    <Compile Include="Core\Domain\BusinessClearance.cs" />
+    <Compile Include="Core\Domain\BizRecord.cs" />
+    <Compile Include="Core\Domain\Residency.cs" />
+    <Compile Include="Core\Domain\Indigency.cs" />
+    <Compile Include="Core\Domain\Blotter.cs" />
+    <Compile Include="Core\Domain\DailyDuty.cs" />
+    <Compile Include="Core\Domain\Property.cs" />
+    <Compile Include="Core\Domain\PropertyType.cs" />
+    <Compile Include="Core\Domain\Children.cs" />
+    <Compile Include="Core\Domain\FamilyMedicalHistory.cs" />
+    <Compile Include="Core\Domain\Official.cs" />
+    <Compile Include="Core\Domain\OfficialGroup.cs" />
+    <Compile Include="Core\Domain\OfficialPosition.cs" />
+    <Compile Include="Core\Domain\PastJob.cs" />
+    <Compile Include="Core\Domain\Permission.cs" />
+    <Compile Include="Core\Domain\PersonalInfo.cs" />
+    <Compile Include="Core\Domain\User.cs" />
+    <Compile Include="Core\IRepositories\IBarangayClearanceRepo.cs" />
+    <Compile Include="Core\IRepositories\IBizWorkerRepo.cs" />
+    <Compile Include="Core\IRepositories\IBizRecordRepo.cs" />
+    <Compile Include="Core\IRepositories\IBusinessClearanceRepo.cs" />
+    <Compile Include="Core\IRepositories\IResidencyRepo.cs" />
+    <Compile Include="Core\IRepositories\IIndigencyRepo.cs" />
+    <Compile Include="Core\IRepositories\IBlotterRepo.cs" />
+    <Compile Include="Core\IRepositories\IPropertyTypeRepo.cs" />
+    <Compile Include="Core\IRepositories\IPropertyRepo.cs" />
+    <Compile Include="Core\IRepositories\IDailyDutyRepo.cs" />
+    <Compile Include="Core\IRepositories\IOfficialGroupRepo.cs" />
+    <Compile Include="Core\IRepositories\IOfficialPositionRepo.cs" />
+    <Compile Include="Core\IRepositories\IOfficialRepo.cs" />
+    <Compile Include="Core\IRepositories\IPersonalInfoRepo.cs" />
+    <Compile Include="Core\IRepositories\IPastJobRepo.cs" />
+    <Compile Include="Core\IRepositories\IFamilyMedicalHistoryRepo.cs" />
+    <Compile Include="Core\IRepositories\IChildrenRepo.cs" />
+    <Compile Include="Core\IRepositories\IPermissionRepository.cs" />
+    <Compile Include="Core\IRepositories\IRepository.cs" />
+    <Compile Include="Core\IRepositories\IUserRepository.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Migrations\201912281443305_initial.cs" />
+    <Compile Include="Migrations\201912281443305_initial.Designer.cs">
+      <DependentUpon>201912281443305_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001010407485_AddOfficialTableAndAddContactNumberInPersonalInfo.cs" />
+    <Compile Include="Migrations\202001010407485_AddOfficialTableAndAddContactNumberInPersonalInfo.Designer.cs">
+      <DependentUpon>202001010407485_AddOfficialTableAndAddContactNumberInPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001041237066_AddPropertyAndDailyDuty.cs" />
+    <Compile Include="Migrations\202001041237066_AddPropertyAndDailyDuty.Designer.cs">
+      <DependentUpon>202001041237066_AddPropertyAndDailyDuty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002100746036_blotter.cs" />
+    <Compile Include="Migrations\202002100746036_blotter.Designer.cs">
+      <DependentUpon>202002100746036_blotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110558521_add_tables.cs" />
+    <Compile Include="Migrations\202002110558521_add_tables.Designer.cs">
+      <DependentUpon>202002110558521_add_tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002130250257_AddColumnCreateTimeStampOnPersonalInfo.cs" />
+    <Compile Include="Migrations\202002130250257_AddColumnCreateTimeStampOnPersonalInfo.Designer.cs">
+      <DependentUpon>202002130250257_AddColumnCreateTimeStampOnPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002130649342_add_user_table.cs" />
+    <Compile Include="Migrations\202002130649342_add_user_table.Designer.cs">
+      <DependentUpon>202002130649342_add_user_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003070613497_update-372020.cs" />
+    <Compile Include="Migrations\202003070613497_update-372020.Designer.cs">
+      <DependentUpon>202003070613497_update-372020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003110135153_update_3112020.cs" />
+    <Compile Include="Migrations\202003110135153_update_3112020.Designer.cs">
+      <DependentUpon>202003110135153_update_3112020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003191102075_update-031920.cs" />
+    <Compile Include="Migrations\202003191102075_update-031920.Designer.cs">
+      <DependentUpon>202003191102075_update-031920.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\Repositories\BizWorkerRepo.cs" />
+    <Compile Include="Persistence\Repositories\BizRecordRepo.cs" />
+    <Compile Include="Persistence\Repositories\BusinessClearanceRepo.cs" />
+    <Compile Include="Persistence\Repositories\BarangayClearanceRepo.cs" />
+    <Compile Include="Persistence\Repositories\ResidencyRepo.cs" />
+    <Compile Include="Persistence\Repositories\IndigencyRepo.cs" />
+    <Compile Include="Persistence\EntityConfiguration\UserConfiguration.cs" />
+    <Compile Include="Persistence\DataContext.cs" />
+    <Compile Include="Persistence\Repositories\BlotterRepo.cs" />
+    <Compile Include="Persistence\Repositories\DailyDutyRepo.cs" />
+    <Compile Include="Persistence\Repositories\PropertyTypeRepo.cs" />
+    <Compile Include="Persistence\Repositories\PropertyRepo.cs" />
+    <Compile Include="Persistence\Repositories\OfficialGroupRepo.cs" />
+    <Compile Include="Persistence\Repositories\OfficialPositionRepo.cs" />
+    <Compile Include="Persistence\Repositories\OfficialRepo.cs" />
+    <Compile Include="Persistence\Repositories\PersonalInfoRepo.cs" />
+    <Compile Include="Persistence\Repositories\PastJobRepo.cs" />
+    <Compile Include="Persistence\Repositories\FamilyMedicalHistoryRepo.cs" />
+    <Compile Include="Persistence\Repositories\PermissionRepository.cs" />
+    <Compile Include="Persistence\Repositories\Repository.cs" />
+    <Compile Include="Persistence\Repositories\ChildrenRepo.cs" />
+    <Compile Include="Persistence\Repositories\UserRepository.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912281443305_initial.resx">
+      <DependentUpon>201912281443305_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001010407485_AddOfficialTableAndAddContactNumberInPersonalInfo.resx">
+      <DependentUpon>202001010407485_AddOfficialTableAndAddContactNumberInPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001041237066_AddPropertyAndDailyDuty.resx">
+      <DependentUpon>202001041237066_AddPropertyAndDailyDuty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002100746036_blotter.resx">
+      <DependentUpon>202002100746036_blotter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110558521_add_tables.resx">
+      <DependentUpon>202002110558521_add_tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002130250257_AddColumnCreateTimeStampOnPersonalInfo.resx">
+      <DependentUpon>202002130250257_AddColumnCreateTimeStampOnPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002130649342_add_user_table.resx">
+      <DependentUpon>202002130649342_add_user_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003070613497_update-372020.resx">
+      <DependentUpon>202003070613497_update-372020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003110135153_update_3112020.resx">
+      <DependentUpon>202003110135153_update_3112020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003191102075_update-031920.resx">
+      <DependentUpon>202003191102075_update-031920.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

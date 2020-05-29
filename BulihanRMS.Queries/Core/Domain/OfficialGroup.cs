@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BulihanRMS.Queries.Core.Domain
+{
+    public class OfficialGroup
+    {
+        public OfficialGroup() { }
+        public int OfficialGroupID { get; set; }
+        public string Description { get; set; }
+
+    }
+}
